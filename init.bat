@@ -97,7 +97,7 @@ call oc new-project rhcs-coolstore-p-demo
 echo.
 echo Creating PostgreSQL Database...
 echo.
-call oc new-app --template=postgresql-ephemeral -p POSTGRESQL_USER=brms,POSTGRESQL_PASSWORD=brms,POSTGRESQL_DATABASE=brms,VOLUME_CAPACITY=5Gi
+call oc new-app --template=postgresql-persistent -p POSTGRESQL_USER=brms,POSTGRESQL_PASSWORD=brms,POSTGRESQL_DATABASE=brms,VOLUME_CAPACITY=5Gi
 
 if not "%ERRORLEVEL%" == "0" (
   echo.

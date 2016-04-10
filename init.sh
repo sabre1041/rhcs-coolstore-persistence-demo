@@ -89,7 +89,7 @@ oc new-project rhcs-coolstore-p-demo
 echo
 echo "Creating PostgreSQL Database..."
 echo
-oc new-app --template=postgresql-ephemeral -p POSTGRESQL_USER=brms,POSTGRESQL_PASSWORD=brms,POSTGRESQL_DATABASE=brms,VOLUME_CAPACITY=5Gi
+oc new-app --template=postgresql-persistent -p POSTGRESQL_USER=brms,POSTGRESQL_PASSWORD=brms,POSTGRESQL_DATABASE=brms,VOLUME_CAPACITY=5Gi
 
 if [ $? -ne 0 ]; then
 	echo
